@@ -1,4 +1,4 @@
-![icon](https://raw.githubusercontent.com/snooze92/alfred-epoch-converter/master/icon.png)
+![icon](images/icon.png)
 
 
 Alfred epoch converter
