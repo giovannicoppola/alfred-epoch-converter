@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>snooze92.epochConverter</string>
+	<key>connections</key>
+	<dict>
+		<key>84A7FB97-8BB7-459D-BC8D-81F919E0B448</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>14ADF12A-3111-4EBB-BA77-E196F0FCC87D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>FDC91150-5C5D-45B3-BECB-23F0490DCBB7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Julien "Snooze92" Lehuen</string>
+	<key>description</key>
+	<string>Make timestamps human-readable</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Epoch Converter</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:mainkeyword}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Converting timestamp...</string>
+				<key>script</key>
+				<string>export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH
+python3 epoch.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Convert timestamp in any unit into a human-readable format</string>
+				<key>title</key>
+				<string>Convert epoch timestamp</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>84A7FB97-8BB7-459D-BC8D-81F919E0B448</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>14ADF12A-3111-4EBB-BA77-E196F0FCC87D</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Copied to clipboard.</string>
+				<key>title</key>
+				<string>Time: {query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>FDC91150-5C5D-45B3-BECB-23F0490DCBB7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string># Usage
+
+
+- `ts &lt;timestamp&gt;` will guess the precision and display as human readable, both Local and GMT
+- `ts &lt;YYYY-mm-dd&gt;` will give epoch timestamps on that date, at midnight
+- `ts &lt;YYYY-mm-dd&gt; &lt;HH:MM:SS&gt;` will give epoch timestamps on that date, at that time (both space and T are supported as separator, seconds are optional)
+- `ts &lt;HH:MM:SS&gt;` will give epoch timestamps for today, at that time (seconds are optional)
+- `ts` will display the current time as a UNIX epoch timestamp with different precisions, as well as attempt converting what is in your clipboard</string>
+	<key>uidata</key>
+	<dict>
+		<key>14ADF12A-3111-4EBB-BA77-E196F0FCC87D</key>
+		<dict>
+			<key>xpos</key>
+			<real>440</real>
+			<key>ypos</key>
+			<real>215</real>
+		</dict>
+		<key>84A7FB97-8BB7-459D-BC8D-81F919E0B448</key>
+		<dict>
+			<key>xpos</key>
+			<real>180</real>
+			<key>ypos</key>
+			<real>215</real>
+		</dict>
+		<key>FDC91150-5C5D-45B3-BECB-23F0490DCBB7</key>
+		<dict>
+			<key>xpos</key>
+			<real>440</real>
+			<key>ypos</key>
+			<real>335</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>epoch</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>mainkeyword</string>
+		</dict>
+	</array>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.2</string>
+	<key>webaddress</key>
+	<string>https://github.com/giovannicoppola/alfred-epoch-converter</string>
+</dict>
+</plist>

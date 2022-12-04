@@ -3,6 +3,8 @@
 
 Alfred epoch converter
 ======================
+original by [@Snooze92](https://github.com/snooze92)
+migrated to Python 3 and Alfred 5
 
 Makes it easy to work with epoch timestamps!
 
@@ -30,13 +32,6 @@ Select the option you want, press enter, and the value is copied into your clipb
 
 If you have a human-readable time in your clipboard, no need to type or paste it. The workflow will recognize it for you:
 ![convert-clipboard-time](https://raw.githubusercontent.com/snooze92/alfred-epoch-converter/master/imgs/convert-clipboard-time.gif)
-
-
-Download & installation
------------------------
-
-You can download the workflow file from [GitHub](https://github.com/snooze92/alfred-epoch-converter/releases/latest), then double-click to install.
-The workflow is also released on [Packal](http://www.packal.org/workflow/epoch-converter-0).
 
 
 Usage
